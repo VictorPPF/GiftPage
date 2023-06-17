@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>PROVA DE AMOR</title>
+    <style>
+        body{
+            background-image: url('img/gatinho5.jpg');
+            background-size: cover;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            position: absolute;
+            left: 30%;
+            top: 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 350px;
+            height: 150px;
+            background-color:slateblue;
+            box-shadow: 20px 10px 10px rgba(0, 0, 0, 0.514);
+            border: none;
+            border-radius: 20px;
+            background-image: url(https://images.tcdn.com.br/img/img_prod/501135/papel_de_parede_coracao_rosa_e_cinza_2015_1_20200618134705.jpg);
+            background-size: cover;
+        }
+        
+        .button {
+            padding: 5px 10px;
+            font-size: 16px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color:white;
+            box-shadow: 5px 2px 2px rgba(0, 0, 0, 0.452);
+            font-family: 'Helvetica', sans-serif;
+            cursor: pointer;
+        }
+        
+        
+        .text{
+            margin: 10px;
+            font-family: 'Helvetica', sans-serif;
+            text-align: center;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text"> Olá vc ama seu namo? hein? Ama ele? hein?</h2>
+        <div>
+            <button class="button" id="yesButton" onclick="yesButton()">Sim</button>
+            <button class="button" id="noButton" onmouseover="noButton()">Nao</button>
+        </div>
+    </div>
+    
+    <script>
+
+        function noButton(){
+            var container = document.querySelector('.container');
+            var newX = Math.floor(Math.random() * (window.innerWidth - container.offsetWidth));
+            var newY = Math.floor(Math.random() * (window.innerHeight - container.offsetHeight));
+            container.style.left = newX + 'px';
+            container.style.top = newY + 'px';
+        }
+        function yesButton(){    
+            window.location.href = 'home.html';
+        }
+    </script>
+    </body>
+</html>
